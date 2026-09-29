@@ -19,6 +19,7 @@ import { Footer } from './components/Footer';
 import { LeadModal } from './components/LeadModal';
 import { StickyMobileBar } from './components/StickyMobileBar';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { AnimateIn } from './components/AnimateIn';
 import { LeadFormData } from './types';
 
 export default function App() {
@@ -35,36 +36,56 @@ export default function App() {
       <Header onOpenLeadModal={() => setIsModalOpen(true)} />
 
       {/* Main Landing Page Content */}
-      <main className="flex-1">
+      <main className="flex-1 overflow-hidden">
         {/* Hero Section: CandleX-IA AI Robot & Mentoria */}
-        <Hero onLeadCaptured={handleLeadCaptured} />
+        <AnimateIn>
+          <Hero onLeadCaptured={handleLeadCaptured} />
+        </AnimateIn>
 
         {/* Quantified Metrics & Proof Bar */}
-        <ProofBar />
+        <AnimateIn delay={200}>
+          <ProofBar />
+        </AnimateIn>
 
         {/* Direct Reality Comparison: Por que 97% quebram a banca */}
-        <ComparisonSection />
+        <AnimateIn>
+          <ComparisonSection />
+        </AnimateIn>
 
         {/* Dedicated AI Robot Section: CandleX-IA */}
-        <CandleXIaSection />
+        <AnimateIn>
+          <CandleXIaSection />
+        </AnimateIn>
 
         {/* Dedicated Certificate Section: Certificado Oficial de Conclusão */}
-        <CertificateSection />
+        <AnimateIn>
+          <CertificateSection />
+        </AnimateIn>
 
         {/* Interactive Math Risk & Profit Simulator */}
-        <ProfitCalculator />
+        <AnimateIn>
+          <ProfitCalculator />
+        </AnimateIn>
 
         {/* Verified Student Testimonials in Binary Options */}
-        <Testimonials />
+        <AnimateIn>
+          <Testimonials />
+        </AnimateIn>
 
         {/* Community & Direct Contact: Telegram VIP + WhatsApp Oficial */}
-        <ChannelsSection />
+        <AnimateIn>
+          <ChannelsSection />
+        </AnimateIn>
 
         {/* Objections and FAQ Accordion */}
-        <FaqSection />
+        <AnimateIn>
+          <FaqSection />
+        </AnimateIn>
 
         {/* Final Urgent Conversion Block */}
-        <FinalCta />
+        <AnimateIn>
+          <FinalCta />
+        </AnimateIn>
       </main>
 
       {/* Quiet Footer with Risk Notice & Links */}
