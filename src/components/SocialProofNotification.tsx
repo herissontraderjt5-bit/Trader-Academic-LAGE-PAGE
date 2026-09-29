@@ -1,18 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, TrendingDown, PlayCircle, ShieldCheck } from 'lucide-react';
+import { TrendingUp, TrendingDown, ShieldCheck, MessageCircle } from 'lucide-react';
 
 const NOTIFICATIONS = [
-  { text: "Fernando S. acabou de lucrar R$ 180,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
-  { text: "Amanda C. está terminando de assistir a Aula 05 do Trader Academic", icon: PlayCircle, color: "text-blue-400" },
-  { text: "Ricardo O. bateu a meta de 3x0 usando o robô CandleX-IA", icon: TrendingUp, color: "text-emerald-400" },
-  { text: "Julio M. tomou um loss de R$ 30,00, mas já está recuperando com a IA", icon: TrendingDown, color: "text-rose-400" },
-  { text: "Marcos P. lucrou R$ 250,00 seguindo a confluência da IA em M5", icon: TrendingUp, color: "text-emerald-400" },
-  { text: "Camila T. acabou de lucrar R$ 95,00 com o sinal do CandleX-IA", icon: TrendingUp, color: "text-emerald-400" },
-  { text: "Tiago L. teve um stop loss hoje, seguindo o gerenciamento do curso", icon: TrendingDown, color: "text-rose-400" },
-  { text: "Luciana R. fez R$ 420,00 de lucro com as métricas preditivas da IA", icon: TrendingUp, color: "text-emerald-400" },
-  { text: "Bruno K. ativou o robô CandleX-IA na corretora HIOVE agora", icon: ShieldCheck, color: "text-fuchsia-400" },
-  { text: "Pedro H. lucrou R$ 115,00 no fluxo contínuo com análise da IA", icon: TrendingUp, color: "text-emerald-400" },
-  { text: "Sabrina W. bateu a meta diária usando o CandleX-IA", icon: TrendingUp, color: "text-emerald-400" },
+  // Lucros
+  { text: "João P. acabou de lucrar R$ 125,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Ana T. acabou de lucrar R$ 240,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Roberto S. acabou de lucrar R$ 85,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Amanda G. acabou de lucrar R$ 310,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Felipe B. acabou de lucrar R$ 180,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Letícia D. acabou de lucrar R$ 420,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Rodrigo V. acabou de lucrar R$ 95,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+
+  // Entrou no Telegram
+  { text: "Maria F. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
+  { text: "Lucas C. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
+  { text: "Beatriz N. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
+  { text: "Thiago H. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
+
+  // Loss Realista
+  { text: "Carlos R. tomou um loss de R$ 25,00, mas já está recuperando com a IA", icon: TrendingDown, color: "text-rose-400" },
+  { text: "Priscila J. teve um stop loss hoje, mas segue o gerenciamento da IA", icon: TrendingDown, color: "text-rose-400" },
+  { text: "Rafael L. tomou um loss de R$ 40,00, aguardando próximo sinal da IA", icon: TrendingDown, color: "text-rose-400" },
+
+  // Ativou Robô
+  { text: "Juliana M. ativou o robô CandleX-IA na corretora HIOVE", icon: ShieldCheck, color: "text-fuchsia-400" },
+  { text: "Fernanda A. ativou o robô CandleX-IA na corretora HIOVE", icon: ShieldCheck, color: "text-fuchsia-400" },
+  { text: "Eduardo K. ativou o robô CandleX-IA na corretora HIOVE", icon: ShieldCheck, color: "text-fuchsia-400" },
+  
+  // Mais Lucros para dominar a lista
+  { text: "Camila T. acabou de lucrar R$ 150,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Marcos P. acabou de lucrar R$ 275,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
+  { text: "Sabrina W. acabou de lucrar R$ 115,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" }
 ];
 
 export const SocialProofNotification: React.FC = () => {
@@ -39,7 +57,14 @@ export const SocialProofNotification: React.FC = () => {
       setIsVisible(false);
       
       setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % NOTIFICATIONS.length);
+        // Pick a random notification but prevent immediate repeats if possible
+        setCurrentIndex((prev) => {
+          let next;
+          do {
+            next = Math.floor(Math.random() * NOTIFICATIONS.length);
+          } while (next === prev && NOTIFICATIONS.length > 1);
+          return next;
+        });
         setIsVisible(true);
       }, 600); // 600ms fade out before changing and fading in
       
