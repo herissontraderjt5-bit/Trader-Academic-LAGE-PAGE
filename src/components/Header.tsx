@@ -17,8 +17,8 @@ export const Header: React.FC<HeaderProps> = () => {
             href="#" 
             className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded"
           >
-            <div className="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 font-black text-lg group-hover:border-amber-400 transition-colors">
-              <Bot className="w-5 h-5 text-amber-400" />
+            <div className="w-8 h-8 rounded-full border border-amber-500/40 overflow-hidden shadow-lg shadow-amber-500/20 group-hover:border-amber-400 group-hover:shadow-amber-500/40 transition-all flex-shrink-0">
+              <img src="/favicon.png" alt="CandleX-IA Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-xl font-black tracking-tight text-white font-display flex items-center gap-1.5">
               CANDLEX-IA
