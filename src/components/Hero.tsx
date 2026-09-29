@@ -49,6 +49,27 @@ export const Hero: React.FC<HeroProps> = () => {
           </p>
         </div>
 
+        {/* Real-time Urgency Countdown */}
+        <div className="inline-flex flex-wrap items-center justify-center gap-3 p-3 px-5 sm:px-7 rounded-2xl bg-gradient-to-r from-slate-900/90 via-amber-950/40 to-slate-900/90 border border-amber-500/40 shadow-xl shadow-amber-950/20 text-center mx-auto">
+          <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-300 uppercase">
+            <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+            <span>VAGAS PROMOCIONAIS · ENCERRANDO EM:</span>
+          </div>
+          <div className="flex items-center gap-1.5 font-mono text-amber-400 font-black text-sm">
+            <span className="bg-slate-950 px-2 py-1 rounded border border-amber-400/40 shadow-inner">
+              {String(timeLeft.hours).padStart(2, '0')}h
+            </span>
+            <span className="text-amber-400 font-bold">:</span>
+            <span className="bg-slate-950 px-2 py-1 rounded border border-amber-400/40 shadow-inner">
+              {String(timeLeft.minutes).padStart(2, '0')}m
+            </span>
+            <span className="text-amber-400 font-bold">:</span>
+            <span className="bg-slate-950 px-2 py-1 rounded border border-amber-400/40 shadow-inner">
+              {String(timeLeft.seconds).padStart(2, '0')}s
+            </span>
+          </div>
+        </div>
+
         {/* 60 Days Free Highlight (Very Prominent) */}
         <div className="inline-block p-[2px] rounded-3xl bg-gradient-to-r from-amber-500 via-yellow-300 to-amber-500 animate-pulse shadow-[0_0_40px_rgba(245,158,11,0.3)]">
           <div className="bg-[#070B12] rounded-3xl px-8 py-5 flex items-center gap-4">

@@ -20,6 +20,7 @@ import { LeadModal } from './components/LeadModal';
 import { StickyMobileBar } from './components/StickyMobileBar';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { AnimateIn } from './components/AnimateIn';
+import { SocialProofNotification } from './components/SocialProofNotification';
 import { LeadFormData } from './types';
 
 export default function App() {
@@ -103,6 +104,9 @@ export default function App() {
         onClose={() => setIsModalOpen(false)}
         onLeadCaptured={handleLeadCaptured}
       />
+
+      {/* Fake Social Proof Notifications (Popup Bottom Left) */}
+      <SocialProofNotification />
     </div>
   );
 }
