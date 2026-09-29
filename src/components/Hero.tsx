@@ -71,52 +71,56 @@ export const Hero: React.FC<HeroProps> = () => {
             href={TARGET_AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-black text-slate-950 bg-gradient-to-br from-amber-400 to-amber-600 hover:from-amber-300 hover:to-amber-500 rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.2)] hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] transform hover:-translate-y-1 transition-all"
+            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-black text-slate-950 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_40px_rgba(245,158,11,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            <div className="flex items-center gap-2">
-              <Bot className="w-6 h-6" />
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Bot className="w-6 h-6 animate-bounce" style={{ animationDuration: '2s' }} />
               <span>Acessar CandleX-IA</span>
             </div>
-            <span className="text-xs font-bold bg-black/20 px-2 py-1 rounded text-amber-100 uppercase tracking-wide">Acesso Imediato</span>
+            <span className="relative z-10 text-xs font-bold bg-black/20 px-2 py-1 rounded text-amber-100 uppercase tracking-wide">Acesso Imediato</span>
           </a>
 
           <a
             href="https://hiove.io/gSBstV"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-black text-slate-950 bg-gradient-to-br from-emerald-400 to-emerald-600 hover:from-emerald-300 hover:to-emerald-500 rounded-2xl shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transform hover:-translate-y-1 transition-all"
+            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-black text-white bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl shadow-[0_0_20px_rgba(192,38,211,0.4)] hover:shadow-[0_0_40px_rgba(192,38,211,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-6 h-6" />
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Sparkles className="w-6 h-6 animate-pulse" />
               <span>Cadastro HIOVE</span>
             </div>
-            <span className="text-xs font-bold bg-black/20 px-2 py-1 rounded text-emerald-100 uppercase tracking-wide">Corretora Oficial</span>
+            <span className="relative z-10 text-xs font-bold bg-black/20 px-2 py-1 rounded text-fuchsia-100 uppercase tracking-wide">Corretora Oficial</span>
           </a>
 
           <a
             href={TELEGRAM_GROUP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-[#229ED9] to-[#1c84b5] hover:brightness-110 rounded-2xl shadow-[0_0_20px_rgba(34,158,217,0.2)] transform hover:-translate-y-1 transition-all"
+            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-[#229ED9] to-[#1c84b5] rounded-2xl shadow-[0_0_20px_rgba(34,158,217,0.4)] hover:shadow-[0_0_40px_rgba(34,158,217,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            <div className="flex items-center gap-2">
-              <Send className="w-6 h-6" />
+            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Send className="w-6 h-6 group-hover:animate-ping" style={{ animationDuration: '3s' }} />
               <span>Grupo Telegram</span>
             </div>
-            <span className="text-xs text-[#bce2f5] uppercase tracking-wide">Sinais VIP</span>
+            <span className="relative z-10 text-xs text-[#bce2f5] uppercase tracking-wide">Sinais VIP</span>
           </a>
 
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-green-500 to-green-600 hover:brightness-110 rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.2)] transform hover:-translate-y-1 transition-all"
+            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
           >
-            <div className="flex items-center gap-2">
-              <Phone className="w-6 h-6" />
+            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Phone className="w-6 h-6 animate-pulse" />
               <span>Atendimento WhatsApp</span>
             </div>
-            <span className="text-xs text-green-200 uppercase tracking-wide">Suporte 24h</span>
+            <span className="relative z-10 text-xs text-green-200 uppercase tracking-wide">Suporte 24h</span>
           </a>
 
         </div>
