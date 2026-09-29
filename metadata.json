@@ -1,0 +1,8 @@
+{
+  "name": "Trader Academic | LAGE-PAGE",
+  "description": "Mentoria completa de Opções Binárias, Forex, B3 e Criptomoedas com o Robô de Inteligência Artificial CandleX-IA e Certificado de Conclusão.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
