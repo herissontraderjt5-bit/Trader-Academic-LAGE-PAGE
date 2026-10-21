@@ -1,6 +1,6 @@
 import React from 'react';
-import { TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_URL, WHATSAPP_DISPLAY } from '../types';
-import { Shield, ExternalLink, Send, Phone, Award, Bot } from 'lucide-react';
+import { TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_COMMUNITY_URL, WHATSAPP_URL, WHATSAPP_DISPLAY } from '../types';
+import { Shield, ExternalLink, Send, Phone, Award, Bot, MessageSquare } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -25,6 +25,15 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-1 text-[11px]">
               <a 
+                href={WHATSAPP_COMMUNITY_URL} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-emerald-400 hover:underline font-semibold"
+              >
+                <MessageSquare className="w-3.5 h-3.5" />
+                <span>Comunidade WhatsApp</span>
+              </a>
+              <a 
                 href={TELEGRAM_GROUP_URL} 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -37,10 +46,10 @@ export const Footer: React.FC = () => {
                 href={WHATSAPP_URL} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-emerald-400 hover:underline font-mono"
+                className="flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 hover:underline font-mono"
               >
                 <Phone className="w-3.5 h-3.5" />
-                <span>WhatsApp: {WHATSAPP_DISPLAY}</span>
+                <span>Suporte: {WHATSAPP_DISPLAY}</span>
               </a>
             </div>
           </div>

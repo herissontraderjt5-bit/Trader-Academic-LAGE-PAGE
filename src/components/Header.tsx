@@ -1,6 +1,6 @@
 import React from 'react';
-import { TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_URL, WHATSAPP_DISPLAY } from '../types';
-import { ExternalLink, Send, MessageCircle, Bot } from 'lucide-react';
+import { TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_COMMUNITY_URL, WHATSAPP_URL, WHATSAPP_DISPLAY } from '../types';
+import { ExternalLink, Send, MessageSquare, MessageCircle, Bot } from 'lucide-react';
 
 interface HeaderProps {
   onOpenLeadModal?: () => void;
@@ -40,16 +40,17 @@ export const Header: React.FC<HeaderProps> = () => {
               <span className="hidden sm:inline">Telegram VIP</span>
             </a>
 
-            {/* WhatsApp Link */}
+            {/* WhatsApp Community Link */}
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_COMMUNITY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 rounded-lg transition-all"
-              title="Falar no WhatsApp"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 rounded-lg transition-all"
+              title="Entrar na Comunidade WhatsApp"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>{WHATSAPP_DISPLAY}</span>
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span className="hidden md:inline">Comunidade WhatsApp</span>
+              <span className="md:hidden">WhatsApp</span>
             </a>
 
             {/* Primary Action Button */}

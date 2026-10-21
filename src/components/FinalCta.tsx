@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { TARGET_AFFILIATE_URL } from '../types';
-import { ShieldCheck, ArrowRight, Zap, CheckCircle2, Lock, Bot } from 'lucide-react';
+import { TARGET_AFFILIATE_URL, WHATSAPP_COMMUNITY_URL } from '../types';
+import { ShieldCheck, ArrowRight, Zap, CheckCircle2, Lock, Bot, MessageSquare } from 'lucide-react';
 
 export const FinalCta: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 14, minutes: 28, seconds: 45 });
@@ -37,17 +37,17 @@ export const FinalCta: React.FC = () => {
 
         {/* Powerful Headline */}
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display max-w-3xl mx-auto leading-tight">
-          Comprove a qualidade da ferramenta por <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-300">60 Dias 100% Free</span> na Hiove.
+          Comprove a qualidade da ferramenta por <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-300">7 Dias de Teste Grátis</span> na Hiove.
         </h2>
 
         <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Sem mensalidade nos primeiros 60 dias. Opere com o Robô <strong className="text-amber-400 font-mono">CandleX-IA</strong>, pegue as confluências em tempo real, comprove a assertividade de 85% a 92% e saque seus lucros via PIX.
+          Sem mensalidade nos primeiros 7 dias. Opere com o Robô <strong className="text-amber-400 font-mono">CandleX-IA</strong>, pegue as confluências em tempo real, comprove a assertividade de 85% a 92% e saque seus lucros via PIX.
         </p>
 
         {/* Realistic Timer Container */}
         <div className="inline-flex items-center gap-3 p-3 px-6 rounded-xl bg-slate-900/90 border border-amber-500/30 shadow-lg text-center">
           <span className="text-xs text-slate-300 uppercase font-semibold font-mono">
-            Vagas com 60 dias free encerram em:
+            Vagas com 7 dias de teste grátis encerram em:
           </span>
           <div className="flex items-center gap-1.5 font-mono text-amber-400 font-bold text-sm">
             <span className="bg-slate-950 px-2 py-1 rounded border border-slate-800">
@@ -64,16 +64,26 @@ export const FinalCta: React.FC = () => {
           </div>
         </div>
 
-        {/* Primary High-Impact CTA Button */}
-        <div className="pt-2">
+        {/* Primary and WhatsApp CTA Buttons */}
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={TARGET_AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-10 py-5 text-base sm:text-lg font-black text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 hover:from-amber-300 hover:to-amber-200 rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-500/50 transform hover:-translate-y-1 active:translate-y-0 transition-all text-center whitespace-nowrap"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 text-base sm:text-lg font-black text-slate-950 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 hover:from-amber-300 hover:to-amber-200 rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-500/50 transform hover:-translate-y-1 active:translate-y-0 transition-all text-center whitespace-nowrap"
           >
-            <span>Quero Meus 60 Dias Free no CandleX-IA</span>
+            <span>Quero Meus 7 Dias de Teste Grátis no CandleX-IA</span>
             <ArrowRight className="w-5 h-5 text-slate-950" />
+          </a>
+
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-5 text-base font-bold text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 rounded-2xl shadow-xl shadow-emerald-600/30 hover:shadow-emerald-600/50 transform hover:-translate-y-1 active:translate-y-0 transition-all text-center whitespace-nowrap"
+          >
+            <MessageSquare className="w-5 h-5 text-emerald-100" />
+            <span>Entrar na Comunidade WhatsApp</span>
           </a>
         </div>
 

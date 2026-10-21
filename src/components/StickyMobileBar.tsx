@@ -1,6 +1,6 @@
 import React from 'react';
-import { TARGET_AFFILIATE_URL, WHATSAPP_URL } from '../types';
-import { ArrowRight, Phone, Bot } from 'lucide-react';
+import { TARGET_AFFILIATE_URL, WHATSAPP_COMMUNITY_URL } from '../types';
+import { ArrowRight, MessageSquare, Bot } from 'lucide-react';
 
 interface StickyMobileBarProps {
   onOpenModal?: () => void;
@@ -12,7 +12,7 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({ onOpenModal })
       <div className="flex flex-col min-w-0">
         <span className="text-[10px] text-amber-400 font-mono font-bold leading-tight truncate flex items-center gap-1">
           <Bot className="w-3 h-3 text-amber-400 shrink-0" />
-          CandleX-IA · 60 Dias Free
+          CandleX-IA · 7 Dias Grátis
         </span>
         <span className="text-xs font-bold text-white font-mono leading-tight truncate">
           Comprove na HIOVE
@@ -21,13 +21,14 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({ onOpenModal })
 
       <div className="flex items-center gap-1.5 shrink-0">
         <a
-          href={WHATSAPP_URL}
+          href={WHATSAPP_COMMUNITY_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400"
-          aria-label="WhatsApp"
+          aria-label="Entrar na Comunidade WhatsApp"
+          title="Entrar na Comunidade WhatsApp"
         >
-          <Phone className="w-3.5 h-3.5" />
+          <MessageSquare className="w-3.5 h-3.5" />
         </a>
 
         <a

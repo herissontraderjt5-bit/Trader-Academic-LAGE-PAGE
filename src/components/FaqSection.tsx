@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { FaqItem, TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_URL, WHATSAPP_DISPLAY } from '../types';
-import { ChevronDown, HelpCircle, ArrowRight, Send, Phone, Bot } from 'lucide-react';
+import { FaqItem, TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_COMMUNITY_URL, WHATSAPP_URL, WHATSAPP_DISPLAY } from '../types';
+import { ChevronDown, HelpCircle, ArrowRight, Send, Phone, Bot, MessageSquare } from 'lucide-react';
 
 export const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs: FaqItem[] = [
     {
-      question: 'Como funciona o acesso de 60 dias free para comprovar a ferramenta?',
-      answer: 'Liberamos 60 dias de acesso 100% gratuito ao Robô CandleX-IA para você comprovar a assertividade e a alta qualidade da ferramenta operando na corretora HIOVE. Durante 2 meses inteiros você não paga mensalidade, recebe os alertas de confluência em tempo real no Telegram VIP e saca todos os seus lucros diretamente na sua conta bancária via PIX sem travas.',
+      question: 'Como funciona o acesso de 7 dias de teste grátis para comprovar a ferramenta?',
+      answer: 'Liberamos 7 dias de acesso 100% gratuito ao Robô CandleX-IA para você comprovar a assertividade e a alta qualidade da ferramenta operando na corretora HIOVE. Durante os 7 dias de teste você não paga mensalidade, recebe os alertas de confluência em tempo real no Telegram VIP e saca todos os seus lucros diretamente na sua conta bancária via PIX sem travas.',
     },
     {
       question: 'O que é o CandleX-IA e como ele opera em Opções Binárias?',
@@ -93,13 +93,13 @@ export const FaqSection: React.FC = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_COMMUNITY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-lg transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-lg transition-all shadow-md shadow-emerald-500/20"
             >
-              <Phone className="w-3.5 h-3.5" />
-              <span>WhatsApp: {WHATSAPP_DISPLAY}</span>
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>Entrar na Comunidade WhatsApp</span>
             </a>
             <a
               href={TELEGRAM_GROUP_URL}
@@ -109,6 +109,15 @@ export const FaqSection: React.FC = () => {
             >
               <Send className="w-3.5 h-3.5" />
               <span>Canal VIP no Telegram</span>
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-mono text-xs rounded-lg transition-all border border-slate-700"
+            >
+              <Phone className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Suporte: {WHATSAPP_DISPLAY}</span>
             </a>
           </div>
         </div>

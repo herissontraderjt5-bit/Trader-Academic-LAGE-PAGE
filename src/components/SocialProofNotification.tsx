@@ -11,9 +11,11 @@ const NOTIFICATIONS = [
   { text: "Letícia D. acabou de lucrar R$ 420,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
   { text: "Rodrigo V. acabou de lucrar R$ 95,00 com a análise da IA", icon: TrendingUp, color: "text-emerald-400" },
 
-  // Entrou no Telegram
+  // Entrou no Telegram e WhatsApp
   { text: "Maria F. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
+  { text: "Gabriel S. acabou de entrar na Comunidade do WhatsApp", icon: MessageCircle, color: "text-emerald-400" },
   { text: "Lucas C. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
+  { text: "Juliana R. acabou de entrar na Comunidade do WhatsApp", icon: MessageCircle, color: "text-emerald-400" },
   { text: "Beatriz N. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
   { text: "Thiago H. acabou de entrar no Grupo VIP do Telegram", icon: MessageCircle, color: "text-[#229ED9]" },
 

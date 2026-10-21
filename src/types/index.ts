@@ -30,6 +30,7 @@ export interface FaqItem {
 
 export const TARGET_AFFILIATE_URL = "https://trader-academic-mentoria.vercel.app/?ref=363B3";
 export const TELEGRAM_GROUP_URL = "https://t.me/+I-cQ-qziGpIzZjM5";
+export const WHATSAPP_COMMUNITY_URL = "https://chat.whatsapp.com/EpFPyIgqOiFEiyXL5iQpXu";
 export const WHATSAPP_NUMBER = "5569999802629";
 export const WHATSAPP_DISPLAY = "(69) 99980-2629";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

@@ -1,6 +1,6 @@
 import React from 'react';
-import { TELEGRAM_GROUP_URL, WHATSAPP_URL, WHATSAPP_DISPLAY, TARGET_AFFILIATE_URL } from '../types';
-import { Send, Phone, MessageSquare, ArrowRight, CheckCircle2, Sparkles, ExternalLink, Bot } from 'lucide-react';
+import { TELEGRAM_GROUP_URL, WHATSAPP_COMMUNITY_URL, WHATSAPP_URL, WHATSAPP_DISPLAY, TARGET_AFFILIATE_URL } from '../types';
+import { Send, Phone, MessageSquare, ArrowRight, CheckCircle2, Sparkles, ExternalLink, Bot, Users } from 'lucide-react';
 
 export const ChannelsSection: React.FC = () => {
   return (
@@ -11,13 +11,13 @@ export const ChannelsSection: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center mb-10">
           <p className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2 flex items-center justify-center gap-1.5 font-mono">
             <Bot className="w-4 h-4 text-amber-400" />
-            <span>COMUNIDADE & ATENDIMENTO CANDLEX-IA</span>
+            <span>COMUNIDADE & CANAIS OFICIAIS CANDLEX-IA</span>
           </p>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-display">
-            Acompanhe as Análises de Opções Binárias e Fale no WhatsApp
+            Acompanhe as Análises e Entre na Nossa Comunidade
           </h2>
           <p className="mt-2 text-sm text-slate-400">
-            Entre no grupo oficial do Telegram para receber prévias do Robô CandleX-IA e chame no WhatsApp para tirar dúvidas.
+            Entre na comunidade oficial no WhatsApp e no canal do Telegram VIP para receber prévias e confluências do Robô CandleX-IA.
           </p>
         </div>
 
@@ -70,47 +70,66 @@ export const ChannelsSection: React.FC = () => {
             </a>
           </div>
 
-          {/* WhatsApp Direct Support Card */}
+          {/* WhatsApp Community Card */}
           <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#0a1e16] to-slate-900 border border-emerald-500/40 shadow-xl flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
-                  <Phone className="w-6 h-6" />
+                  <Users className="w-6 h-6" />
                 </div>
                 <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/15 px-2.5 py-1 rounded-md border border-emerald-500/30">
-                  ATENDIMENTO OFICIAL
+                  COMUNIDADE OFICIAL
                 </span>
               </div>
 
               <h3 className="text-xl font-bold text-white font-display mb-2">
-                Atendimento Direto no WhatsApp
+                Comunidade Oficial no WhatsApp
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
-                Tire todas as suas dúvidas sobre o Robô CandleX-IA, a Mentoria de Opções Binárias, o Certificado de Conclusão e formas de pagamento diretamente conosco.
+                Faça parte da comunidade exclusiva de traders no WhatsApp. Receba novidades em primeira mão, compartilhe resultados e tire dúvidas sobre o Robô CandleX-IA.
               </p>
 
-              <div className="p-3 rounded-lg bg-slate-950/80 border border-slate-800 text-xs text-slate-300 font-mono mb-6 space-y-1">
-                <div className="flex justify-between">
-                  <span className="text-slate-400">WhatsApp Oficial:</span>
-                  <span className="text-emerald-400 font-bold">{WHATSAPP_DISPLAY}</span>
+              <div className="space-y-2 text-xs text-slate-300 mb-6 font-mono">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Networking direto com outros operadores</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Foco Principal:</span>
-                  <span className="text-white">Opções Binárias & CandleX-IA</span>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Avisos de sessões ao vivo e atualizações da IA</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Acesso 100% gratuito e imediato</span>
                 </div>
               </div>
             </div>
 
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold text-xs sm:text-sm rounded-xl transition-all shadow-lg shadow-emerald-500/20"
-            >
-              <MessageSquare className="w-4 h-4" />
-              <span>Chamar no WhatsApp ({WHATSAPP_DISPLAY})</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            <div className="space-y-3">
+              <a
+                href={WHATSAPP_COMMUNITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-black text-xs sm:text-sm rounded-xl transition-all shadow-lg shadow-emerald-500/20"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>Entrar na Comunidade WhatsApp</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+
+              <div className="pt-2 text-center text-xs text-slate-400 font-mono">
+                Dúvidas individuais?{' '}
+                <a 
+                  href={WHATSAPP_URL} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:underline inline-flex items-center gap-1 font-semibold"
+                >
+                  <Phone className="w-3 h-3" />
+                  <span>Suporte: {WHATSAPP_DISPLAY}</span>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>

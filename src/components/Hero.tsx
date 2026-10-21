@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_URL, WHATSAPP_DISPLAY, LeadFormData } from '../types';
-import { ArrowRight, Send, Phone, Sparkles, Bot, Gift } from 'lucide-react';
+import { TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_COMMUNITY_URL, WHATSAPP_URL, WHATSAPP_DISPLAY, LeadFormData } from '../types';
+import { ArrowRight, Send, Phone, Sparkles, Bot, Gift, MessageSquare } from 'lucide-react';
 
 interface HeroProps {
   onLeadCaptured?: (data: LeadFormData) => void;
@@ -70,13 +70,13 @@ export const Hero: React.FC<HeroProps> = () => {
           </div>
         </div>
 
-        {/* 60 Days Free Highlight (Very Prominent) */}
+        {/* 7 Days Free Highlight (Very Prominent) */}
         <div className="inline-block p-[2px] rounded-3xl bg-gradient-to-r from-amber-500 via-yellow-300 to-amber-500 animate-pulse shadow-[0_0_40px_rgba(245,158,11,0.3)]">
           <div className="bg-[#070B12] rounded-3xl px-8 py-5 flex items-center gap-4">
             <Gift className="w-10 h-10 text-amber-400" />
             <div className="text-left">
               <h2 className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
-                60 DIAS GRÁTIS
+                7 DIAS DE TESTE GRÁTIS
               </h2>
               <p className="text-sm sm:text-base text-slate-300 font-medium">
                 Libere seu acesso sem custo para comprovar a assertividade!
@@ -99,7 +99,7 @@ export const Hero: React.FC<HeroProps> = () => {
               <Bot className="w-6 h-6 animate-bounce" style={{ animationDuration: '2s' }} />
               <span>Acessar CandleX-IA</span>
             </div>
-            <span className="relative z-10 text-xs font-bold bg-black/20 px-2 py-1 rounded text-amber-100 uppercase tracking-wide">Acesso Imediato</span>
+            <span className="relative z-10 text-xs font-bold bg-black/20 px-2 py-1 rounded text-amber-100 uppercase tracking-wide">Teste 7 Dias Grátis</span>
           </a>
 
           <a
@@ -117,6 +117,20 @@ export const Hero: React.FC<HeroProps> = () => {
           </a>
 
           <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
+          >
+            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+            <div className="relative z-10 flex items-center gap-2">
+              <MessageSquare className="w-6 h-6 animate-pulse" />
+              <span>Entrar na Comunidade WhatsApp</span>
+            </div>
+            <span className="relative z-10 text-xs text-green-100 uppercase tracking-wide">Grupo Oficial VIP</span>
+          </a>
+
+          <a
             href={TELEGRAM_GROUP_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -128,20 +142,6 @@ export const Hero: React.FC<HeroProps> = () => {
               <span>Grupo Telegram</span>
             </div>
             <span className="relative z-10 text-xs text-[#bce2f5] uppercase tracking-wide">Sinais VIP</span>
-          </a>
-
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
-          >
-            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-            <div className="relative z-10 flex items-center gap-2">
-              <Phone className="w-6 h-6 animate-pulse" />
-              <span>Atendimento WhatsApp</span>
-            </div>
-            <span className="relative z-10 text-xs text-green-200 uppercase tracking-wide">Suporte 24h</span>
           </a>
 
         </div>

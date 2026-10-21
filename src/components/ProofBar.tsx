@@ -22,7 +22,7 @@ export const ProofBar: React.FC = () => {
       icon: Award,
     },
     {
-      value: '60 Dias Free',
+      value: '7 Dias Grátis',
       label: 'Teste de Qualidade',
       subtext: 'Acesso 100% grátis na Hiove',
       icon: ShieldCheck,
