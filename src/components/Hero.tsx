@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { TARGET_AFFILIATE_URL, TELEGRAM_GROUP_URL, WHATSAPP_COMMUNITY_URL, WHATSAPP_URL, WHATSAPP_DISPLAY, LeadFormData } from '../types';
-import { ArrowRight, Send, Phone, Sparkles, Bot, Gift, MessageSquare } from 'lucide-react';
+import { WHATSAPP_COMMUNITY_URL, LeadFormData } from '../types';
+import { Gift, MessageSquare } from 'lucide-react';
 
 interface HeroProps {
   onLeadCaptured?: (data: LeadFormData) => void;
@@ -85,65 +85,23 @@ export const Hero: React.FC<HeroProps> = () => {
           </div>
         </div>
 
-        {/* Action Buttons Grid */}
-        <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
-          
-          <a
-            href={TARGET_AFFILIATE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-black text-slate-950 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_40px_rgba(245,158,11,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
-          >
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-            <div className="relative z-10 flex items-center gap-2">
-              <Bot className="w-6 h-6 animate-bounce" style={{ animationDuration: '2s' }} />
-              <span>Acessar CandleX-IA</span>
-            </div>
-            <span className="relative z-10 text-xs font-bold bg-black/20 px-2 py-1 rounded text-amber-100 uppercase tracking-wide">Teste 7 Dias Grátis</span>
-          </a>
-
-          <a
-            href="https://hiove.io/gSBstV"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-black text-white bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl shadow-[0_0_20px_rgba(192,38,211,0.4)] hover:shadow-[0_0_40px_rgba(192,38,211,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
-          >
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-            <div className="relative z-10 flex items-center gap-2">
-              <Sparkles className="w-6 h-6 animate-pulse" />
-              <span>Cadastro HIOVE</span>
-            </div>
-            <span className="relative z-10 text-xs font-bold bg-black/20 px-2 py-1 rounded text-fuchsia-100 uppercase tracking-wide">Corretora Oficial</span>
-          </a>
-
+        {/* Action Button */}
+        <div className="pt-4 flex flex-col items-center justify-center max-w-xl mx-auto">
           <a
             href={WHATSAPP_COMMUNITY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
+            className="w-full sm:w-auto relative overflow-hidden group flex flex-col sm:flex-row items-center justify-center gap-3 px-8 sm:px-12 py-5 text-lg sm:text-xl font-bold text-white bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:shadow-[0_0_50px_rgba(34,197,94,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
           >
             <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
             <div className="relative z-10 flex items-center gap-2">
-              <MessageSquare className="w-6 h-6 animate-pulse" />
+              <MessageSquare className="w-6 h-6 sm:w-7 sm:h-7 animate-pulse" />
               <span>Entrar na Comunidade WhatsApp</span>
             </div>
-            <span className="relative z-10 text-xs text-green-100 uppercase tracking-wide">Grupo Oficial VIP</span>
+            <span className="relative z-10 text-xs text-green-100 uppercase tracking-wide bg-black/20 px-3 py-1 rounded-full">
+              Grupo Oficial VIP
+            </span>
           </a>
-
-          <a
-            href={TELEGRAM_GROUP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative overflow-hidden group flex flex-col items-center justify-center gap-2 px-6 py-5 text-lg font-bold text-white bg-gradient-to-br from-[#229ED9] to-[#1c84b5] rounded-2xl shadow-[0_0_20px_rgba(34,158,217,0.4)] hover:shadow-[0_0_40px_rgba(34,158,217,0.6)] transform hover:-translate-y-1 hover:scale-105 active:scale-95 transition-all duration-300"
-          >
-            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-            <div className="relative z-10 flex items-center gap-2">
-              <Send className="w-6 h-6 group-hover:animate-ping" style={{ animationDuration: '3s' }} />
-              <span>Grupo Telegram</span>
-            </div>
-            <span className="relative z-10 text-xs text-[#bce2f5] uppercase tracking-wide">Sinais VIP</span>
-          </a>
-
         </div>
 
       </div>
